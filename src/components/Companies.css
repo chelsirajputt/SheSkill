@@ -1,0 +1,76 @@
+/* Companies Section */
+.companies-section {
+    padding: 50px 0;
+    background-color: #f9f9f9;
+}
+
+.company-card img {
+    width: 400px;  /* Increase the width to make the logo larger */
+    height: auto;  /* Maintain the aspect ratio */
+    margin-bottom: 15px;  /* Adjust margin as needed */
+    object-fit: contain;  /* Ensure the image fits within the given dimensions */
+}
+
+
+
+.companies-heading {
+    text-align: center;
+    font-size: 36px;
+    color: #183b56;
+    margin-bottom: 30px;
+}
+
+.companies-area {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.company-card {
+    width: 250px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(244, 20, 143, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.company-card img {
+    width: 100px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.company-card h3 {
+    font-size: 20px;
+    color: #183b56;
+    margin-bottom: 10px;
+}
+
+.company-card p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.about-more-btn {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #00c8ff;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.about-more-btn:hover {
+    background-color: #0056b3;
+}
+
+.company-card:hover {
+    transform: scale(1.05);
+}
+
