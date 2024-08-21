@@ -10,7 +10,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #f3f4f5; /* Same background color as the container */
+    background-color:#ffffff;
 }
 
 .logo-image {
@@ -111,5 +111,5 @@ button:hover {
 }
 
 .create-account a:hover {
-    text-decoration: underline;
+    text-decoration: none;
 }
