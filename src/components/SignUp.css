@@ -3,7 +3,7 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
-    
+    background: linear-gradient(to right #9653ed, rgb(227, 30, 135));
 }
 
 .left-section {
@@ -52,6 +52,7 @@ h2 {
     font-weight: bold;
     font-size: 1.2rem;
     text-align: left;
+    text-decoration: none;
 }
 
 .input-group {
@@ -93,3 +94,26 @@ button {
 button:hover {
     background-color: #fb46d1;
 }
+
+/* Existing styles... */
+
+.already-account {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.already-account p {
+    margin: 0;
+    font-weight: bold;
+    color: #090202de;
+}
+
+.already-account a {
+    color: #dd249f;
+    text-decoration: none;
+}
+
+.already-account a:hover {
+    text-decoration: underline;
+}
+

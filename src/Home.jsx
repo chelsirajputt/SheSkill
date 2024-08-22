@@ -4,6 +4,8 @@ import Header from './components/Header';
 import Content from './components/Content';
 import CompaniesSection from './components/CompaniesSection';
 import Navbar from './components/Navbar';
+import Footer from './components/Footer';
+
 
 const App = () => {
     return (
@@ -12,6 +14,7 @@ const App = () => {
             <Header />
                <Content />
         <CompaniesSection />
+       <Footer/>
         </div>
     );
 };

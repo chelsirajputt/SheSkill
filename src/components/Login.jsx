@@ -1,6 +1,6 @@
+import './Login.css';
+import * as reactRouterDom from 'react-router-dom';
 
-import './Login.css'
-import { Link } from 'react-router-dom';
 const Login = () => {
     return (
         <>
@@ -10,7 +10,7 @@ const Login = () => {
                 </div>
                 <div className="login-right">
                     <div className="login-box">
-                     <div style={{textAlign:'center'}}> <h2>Login</h2></div>  
+                        <div style={{ textAlign: 'center' }}><h2>Login</h2></div>
                         <form action="/login" method="POST">
                             <div className="input-group">
                                 <label htmlFor="username">Username</label>
@@ -26,7 +26,7 @@ const Login = () => {
                             <button type="submit">Login</button>
                         </form>
                         <div className="create-account">
-                            <p>New user? <Link to='/signup'>Create account</Link></p>
+                            <p>Don't have an account? <reactRouterDom.Link to="/signup">Sign up</reactRouterDom.Link></p>
                         </div>
                     </div>
                 </div>

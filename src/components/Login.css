@@ -40,6 +40,7 @@ h2 {
     margin-bottom: 20px;
     color: #000000;
     font-weight: bold;
+    text-decoration: none;
 }
 
 .input-group {
@@ -71,12 +72,12 @@ input[type="password"] {
 
 .forgot-password a {
     color: #DD2476;
-    text-decoration: none;
+    text-decoration: underline;
     font-weight: bold;
 }
 
 .forgot-password a:hover {
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 button {
@@ -113,3 +114,26 @@ button:hover {
 .create-account a:hover {
     text-decoration: none;
 }
+
+/* Existing styles... */
+
+.create-account {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.create-account p {
+    margin: 0;
+    font-weight: bold;
+    color: #090202de;
+}
+
+.create-account a {
+    color: #dd249f;
+    text-decoration: none;
+}
+
+.create-account a:hover {
+    text-decoration: underline;
+}
+

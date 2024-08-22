@@ -1,23 +1,23 @@
-// src/App.js
 import React from 'react';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from './Home';
-import "./App.css";
-import { BrowserRouter,Route,Routes } from 'react-router-dom';
+import Navbar from './components/Navbar';
 import Login from './components/Login';
 import SignUp from './components/SignUp';
-
-
+import Jobs from './components/Jobs';
+import './App.css';
 
 const App = () => {
     return (
         <BrowserRouter>
-        <Routes>
-            <Route path="/" element={<Home/>}> </Route>
-            <Route path="/login" element={<Login/>}> </Route>
-            <Route path="/signup" element={<SignUp/>}></Route>
-           
-            </Routes></BrowserRouter>
-      
+            <Navbar />
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/login" element={<Login />} />
+                <Route path="/signup" element={<SignUp />} />
+                <Route path="/jobs" element={<Jobs />} />
+            </Routes>
+        </BrowserRouter>
     );
 };
 
