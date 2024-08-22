@@ -5,16 +5,19 @@ import Content from './components/Content';
 import CompaniesSection from './components/CompaniesSection';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import Message from './components/Message';
+import Network from './components/Network';
+
 
 
 const App = () => {
     return (
         <div className='container'>   
         <Navbar/>
-            <Header />
-               <Content />
+        <Header />
+        <Content />
         <CompaniesSection />
-       <Footer/>
+        <Footer/>
         </div>
     );
 };
