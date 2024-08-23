@@ -1,0 +1,115 @@
+/*---nav----*/
+nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    height: 60px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #0796fc;
+    z-index: 1000;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    border-bottom: 2px solid #15a5ed;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo2 {
+    width: 100px;
+    cursor: pointer;
+    margin-right: -13px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 0;
+    flex-grow: 1;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 5px 10px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffffff;
+    background-color: rgb(248, 60, 219);
+    border-radius: 4px;
+}
+
+.SheSkill h3 {
+    color: #667fff;
+    font-weight: bold;
+    font-size: 24px;
+    background: linear-gradient(45deg, #852299, #d45fbe);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 2s infinite;
+}
+
+@keyframes shine {
+    0% { background-position: 0; }
+    100% { background-position: 200%; }
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.login-btn, .signup-btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.login-btn {
+    background-color: #00c8ff;
+    color: white;
+}
+
+.signup-btn {
+    background-color: #f90baa;
+    color: white;
+}
+
+.login-btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.signup-btn:hover {
+    background-color: #ff33ff;
+    transform: scale(1.05);
+}
+
+.navbar .login, 
+.navbar .signup {
+    text-decoration: none;
+}
+
+.navbar .login:hover, 
+.navbar .signup:hover {
+    text-decoration: none;
+}

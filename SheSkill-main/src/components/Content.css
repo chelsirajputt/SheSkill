@@ -1,0 +1,111 @@
+
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 0;
+}
+
+.left-side {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.right-side {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: right;
+}
+/*---second portion----*/
+.left-image {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+}
+
+.job-search-bar {
+    display: flex;
+    margin-top: 20px;
+}
+
+.search-input {
+    width: 250px;
+    padding: 10px;
+    border-radius: 4px;
+    border: none;
+    margin-right: 10px;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.search-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #00c8ff;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.search-btn:hover {
+    background-color: #0056b3;
+}
+
+.job-search-bar {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    gap: 10px; /* Add spacing between inputs */
+}
+
+.job-search-bar .search-input {
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: 2px solid #ccc;
+    background-color: #f9f9f9;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.job-search-bar .search-input:focus {
+    border-color: #00c8ff;
+    box-shadow: 2px 2px 12px rgba(0, 200, 255, 0.4);
+}
+
+.job-search-bar .state-input {
+    width: 150px;
+}
+
+.job-search-bar .city-input {
+    width: 150px;
+}
+
+.job-search-bar .location-input {
+    width: 200px;
+}
+
+.job-search-bar .search-btn {
+    padding: 10px 25px;
+    border: none;
+    border-radius: 8px;
+    background-color: #00c8ff;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.job-search-bar .search-btn:hover {
+    background-color: #0056b3;
+    box-shadow: 2px 2px 12px rgba(0, 86, 179, 0.4);
+}
+
