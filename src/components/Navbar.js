@@ -17,8 +17,9 @@ const Navbar = () => {
                 <li><Link to='/jobs'>Jobs</Link></li>
                 <li><Link to='/Message'>Message</Link></li>
                 <li><Link to='/Network'>Network</Link></li>
-               
-                <li><a href="#">About us</a></li>
+                <li><Link to='/about'>Aboutus</Link></li>
+                
+                
                 <li><a href="#">Entrepreneurship</a></li>
             </ul>
             <div className="buttons">

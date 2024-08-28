@@ -8,6 +8,7 @@ import SignUp from './components/SignUp';
 import Jobs from './components/Jobs';
 import Message from './components/Message';
 import Network from './components/Network';
+import About from './components/About';
 import './App.css';
 
 const App = () => {
@@ -16,11 +17,13 @@ const App = () => {
             <Navbar />
             <Routes>
             <Route path="/home" element={<Home />} />
+            
                 <Route path="/login" element={<Login />} />
                 <Route path="/signup" element={<SignUp />} />
                 <Route path="/jobs" element={<Jobs />} />
                 <Route path="/message" element={<Message />} />
                 <Route path="/network" element={<Network />} />
+                <Route path="/about" element={<About />} />
             </Routes>
         </BrowserRouter>
     );

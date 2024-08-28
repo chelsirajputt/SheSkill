@@ -2,6 +2,11 @@ import React from 'react';
 import './Header.css';
 
 const Header = () => {
+    const handleGetStartedClick = () => {
+        const jobSearchElement = document.getElementById('job-search');
+        jobSearchElement.scrollIntoView({ behavior: 'smooth' });
+    };
+
     return (
         <header>
             <div className="header-content">
@@ -12,9 +17,10 @@ const Header = () => {
                     <p>Your career starts here—take the first step towards your dreams.</p>
                     <p>Empower yourself today, and let your ambitions take flight.</p>
                     
-
                     <div className="button">
-                        <button className="get-started-btn">Get Started</button>
+                        <button className="get-started-btn" onClick={handleGetStartedClick}>
+                            Get Started
+                        </button>
                     </div>
                 </div>
                 <div className="header-right">
