@@ -1,7 +1,33 @@
 import './Login.css';
+import {useState} from 'react'
 import * as reactRouterDom from 'react-router-dom';
 
 const Login = () => {
+    const[email,setEmail]=useState('')
+    const[password,setPassword]=useState('')
+
+    async function handleSubmit(e){
+        e.preventDefault()
+       fetch('http://localhost:8080/login',{
+           method:'POST',
+           headers:{
+               'Content-Type':'application/json'
+               },
+               body:JSON.stringify({emailId:email,password:password})
+           }).then(response=>{
+               if(!response.ok){
+                   throw new Error('Network response was not ok')
+                   }
+               return response.text()
+               }).then(data=>{
+                   console.log(data)
+                   }).catch(error=>{
+                       console.error('There was a problem with the fetch operation',error)
+                       })
+
+        }
+
+
     return (
         <>
             <div className="login-container">
@@ -11,14 +37,18 @@ const Login = () => {
                 <div className="login-right">
                     <div className="login-box">
                         <div style={{ textAlign: 'center' }}><h2>Login</h2></div>
-                        <form action="/login" method="POST">
+                        <form  method="POST" onSubmit={handleSubmit}>
                             <div className="input-group">
                                 <label htmlFor="username">Username</label>
-                                <input type="text" id="username" name="username" required />
+                                <input type="text" id="username" name="username" required
+                                value={email}
+                                                                onChange={(e)=>setEmail(e.target.value)}/>
                             </div>
                             <div className="input-group">
                                 <label htmlFor="password">Password</label>
-                                <input type="password" id="password" name="password" required />
+                                <input type="password" id="password" name="password" required
+                                value={password}
+                                onChange={(e)=>setPassword(e.target.value)}/>
                             </div>
                             <div className="forgot-password">
                                 <a href="/forgot-password">Forgot Password?</a>
