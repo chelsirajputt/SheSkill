@@ -10,7 +10,7 @@ const About = () => {
             </div>
             <div className="about-content">
                 <div className="about-image">
-                    <img src="images/about-image.jpg" alt="About Us" />
+                    <img src="images/about1.jpg" alt="About Us" />
                 </div>
                 <div className="about-text">
                     <h2>Our Mission</h2>
@@ -28,7 +28,7 @@ const About = () => {
             <div className="about-footer">
                 <h2>Get in Touch</h2>
                 <p>If you have any questions or need support, feel free to reach out to us.</p>
-                <a href="mailto:yogaprakash@gmail.com" className="contact-email">info@example.com</a>
+                <a href="mailto:jebo22mca@cmrit.ac.in" className="contact-email">jebo22mca@cmrit.ac.in</a>
                 <button className="contact-button">Contact Us</button>
             </div>
         </div>

@@ -1,7 +1,7 @@
 .about-container {
     padding: 40px;
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    background: linear-gradient(135deg, #0dc7e8, #fb17ff);
     color: white;
     min-height: 100vh;
 }
@@ -85,12 +85,12 @@
 
 .contact-email:hover {
     background-color: #fff;
-    color: #ff7e5f;
+    color: #f730e3;
 }
 
 .contact-button {
     padding: 10px 20px;
-    background-color: #ff7e5f;
+    background-color: #3f9cee;
     color: white;
     border: none;
     border-radius: 5px;
@@ -99,5 +99,5 @@
 }
 
 .contact-button:hover {
-    background-color: #e67e22;
+    background-color: #1e7bf5;
 }

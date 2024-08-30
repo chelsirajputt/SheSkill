@@ -17,10 +17,10 @@ const Navbar = () => {
                 <li><Link to='/jobs'>Jobs</Link></li>
                 <li><Link to='/Message'>Message</Link></li>
                 <li><Link to='/Network'>Network</Link></li>
-                <li><Link to='/about'>Aboutus</Link></li>
+                <li><Link to='/about'>About us</Link></li>
                 
                 
-                <li><a href="#">Entrepreneurship</a></li>
+                <li><Link to='/entrepreneurship'>Entrepreneurship</Link></li>
             </ul>
             <div className="buttons">
                 <Link className="login-btn" to="/login">Login</Link>

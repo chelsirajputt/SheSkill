@@ -1,9 +1,10 @@
+
+
 .signup-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    background: linear-gradient(to right #9653ed, rgb(227, 30, 135));
+    height: 100%;
 }
 
 .left-section {
@@ -11,7 +12,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #ffffff; /* Optional: add a background color */
 }
 
 .left-section img {
@@ -36,17 +36,11 @@
     border-radius: 8px;
 }
 
-.logo img {
-    max-width: 200px;
-    margin-bottom: 10px;
-}
-
 .signup-box {
     width: 100%;
 }
 
 h2 {
-   
     margin-bottom: 16px;
     color: #333;
     font-weight: bold;
@@ -60,17 +54,11 @@ h2 {
     text-align: left;
 }
 
-label {
-    display: block;
-    margin-bottom: 5px;
-    color: #555;
-    font-weight: bold;
-}
-
 input[type="text"],
 input[type="number"],
 input[type="tel"],
-input[type="password"] {
+input[type="password"],
+select {
     width: 100%;
     padding: 8px;
     margin-top: 2px;
@@ -95,8 +83,6 @@ button:hover {
     background-color: #fb46d1;
 }
 
-/* Existing styles... */
-
 .already-account {
     margin-top: 20px;
     text-align: center;
@@ -116,4 +102,3 @@ button:hover {
 .already-account a:hover {
     text-decoration: underline;
 }
-

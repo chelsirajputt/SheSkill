@@ -1,3 +1,4 @@
+import React from 'react';
 import './SignUp.css';
 import { Link } from 'react-router-dom';
 
@@ -14,19 +15,24 @@ const SignUp = () => {
                             <h2>Sign up</h2>
                             <form action="/dashboard" method="POST">
                                 <div className="input-group">
-                                    <input type="text" id="firstname" name="firstname" placeholder="Firstname" required />
+                                    <input type="text" id="fullname" name="fullname" placeholder="Full Name" required />
                                 </div>
                                 <div className="input-group">
-                                    <input type="text" id="lastname" name="lastname" placeholder="Lastname" required />
+                                    <select id="gender" name="gender" required>
+                                        <option value="" disabled selected>Select Gender</option>
+                                        <option value="Male">Male</option>
+                                        <option value="Female">Female</option>
+                                        <option value="Others">Others</option>
+                                    </select>
                                 </div>
                                 <div className="input-group">
                                     <input type="number" id="age" name="age" placeholder="Age" required />
                                 </div>
                                 <div className="input-group">
-                                    <input type="tel" id="phonenumber" name="phonenumber" placeholder="PhoneNumber" required />
+                                    <input type="tel" id="phonenumber" name="phonenumber" placeholder="Phone Number" required />
                                 </div>
                                 <div className="input-group">
-                                    <input type="text" id="Email" name="Email" placeholder="Personal Email" required />
+                                    <input type="text" id="email" name="email" placeholder="Personal Email" required />
                                 </div>
                                 <div className="input-group">
                                     <input type="password" id="password" name="password" placeholder="Set Your Password" required />
