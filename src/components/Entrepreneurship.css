@@ -1,49 +1,104 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
 
+.entrepreneurship-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 0.8fr; /* Adjusted grid column sizes */
+    gap: 20px;
+    align-items: center;
+    background-color: #97e5ff;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 40px auto 0 auto;
+    height: 100vh; /* Make sure the wrapper takes up the full viewport height */
+    position: relative; /* Ensure absolute positioning of the image works */
+   
+    background-size: cover; /* Ensure the background image covers the entire container */
+    background-color: ;
+}
+
+.image-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+
+.image-container:hover {
+    transform: scale(1.05);
+}
+
+.image-container img {
+    width: 70%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+}
 
 .entrepreneurship-container {
     padding: 20px;
-    max-width: 900px;
-    margin: 0 auto;
-    background: rgba(249, 249, 249, 0.9); /* Slight transparency */
+    background: rgba(255, 255, 255, 0.8);
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    z-index: 1; /* Ensure content is above background */
-    width: 100%;
+    transition: background 0.3s;
+}
+
+.entrepreneurship-container:hover {
+    background: rgba(255, 255, 255, 1);
 }
 
 .idea-form {
-    margin-bottom: 20px;
     background: #fff;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s;
+}
+
+.idea-form:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 .idea-form h2 {
-    font-size: 1.8rem;
-    margin-bottom: 10px;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
     color: #333;
+    font-family: 'Roboto', sans-serif;
 }
 
-.idea-form textarea, .idea-form input {
-    display: block;
+.idea-form textarea,
+.idea-form input {
     width: 100%;
     margin-bottom: 15px;
     padding: 12px;
-    font-size: 16px;
+    font-size: 14px;
     border: 1px solid #ddd;
     border-radius: 4px;
+    transition: border-color 0.3s;
+}
+
+.idea-form textarea:focus,
+.idea-form input:focus {
+    border-color: #f35ea1;
+    outline: none;
 }
 
 .idea-form button {
-    padding: 12px 25px;
-    font-size: 16px;
+    padding: 12px 24px;
+    font-size: 14px;
     background-color: #f35ea1;
     color: white;
     border: none;
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s;
+    width: 100%;
 }
 
 .idea-form button:hover {
@@ -59,17 +114,23 @@
     padding: 15px;
     margin-bottom: 20px;
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
 }
 
-.idea-item p {
-    margin: 10px 0;
+.idea-item:hover {
+    transform: translateY(-5px);
 }
 
 .idea-item h4 {
     margin-top: 10px;
     font-size: 1.2rem;
     color: #555;
+}
+
+.idea-item p {
+    margin: 10px 0;
+    font-size: 14px;
 }
 
 .idea-item ul {
@@ -91,3 +152,17 @@
     border: 1px solid #ddd;
     border-radius: 4px;
 }
+.idea-form input[type="text"] {
+    margin-bottom: 15px;
+    padding: 12px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    transition: border-color 0.3s;
+}
+
+.idea-form input[type="text"]:focus {
+    border-color: #f35ea1;
+    outline: none;
+}
+~

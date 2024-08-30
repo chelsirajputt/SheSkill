@@ -21,9 +21,9 @@ const Jobs = () => {
 
     const { isLoggedIn } = useContext(AuthContext);
 
-        if (!isLoggedIn) {
-            return <Navigate to="/login" />;
-        }
+        // if (!isLoggedIn) {
+        //     return <Navigate to="/login" />;
+        // }
     useEffect(() => {
             const token = localStorage.getItem('token');
 
