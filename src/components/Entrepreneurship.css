@@ -15,9 +15,7 @@ body {
     margin: 40px auto 0 auto;
     height: 100vh; /* Make sure the wrapper takes up the full viewport height */
     position: relative; /* Ensure absolute positioning of the image works */
-   
     background-size: cover; /* Ensure the background image covers the entire container */
-    background-color: ;
 }
 
 .image-container {
@@ -73,7 +71,8 @@ body {
 }
 
 .idea-form textarea,
-.idea-form input {
+.idea-form input[type="text"],
+.idea-form input[type="file"] { /* Adjusted to include file input */
     width: 100%;
     margin-bottom: 15px;
     padding: 12px;
@@ -84,7 +83,8 @@ body {
 }
 
 .idea-form textarea:focus,
-.idea-form input:focus {
+.idea-form input[type="text"]:focus,
+.idea-form input[type="file"]:focus { /* Adjusted to include file input */
     border-color: #f35ea1;
     outline: none;
 }
@@ -152,17 +152,3 @@ body {
     border: 1px solid #ddd;
     border-radius: 4px;
 }
-.idea-form input[type="text"] {
-    margin-bottom: 15px;
-    padding: 12px;
-    font-size: 14px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    transition: border-color 0.3s;
-}
-
-.idea-form input[type="text"]:focus {
-    border-color: #f35ea1;
-    outline: none;
-}
-~
