@@ -1,11 +1,17 @@
 import './Login.css';
-import {useState} from 'react'
+import React, {useState, useEffect, useContext} from 'react'
 import * as reactRouterDom from 'react-router-dom';
+import {AuthContext} from './services/AuthContext'
+import {Navigate} from 'react-router-dom'
 
 const Login = () => {
     const[email,setEmail]=useState('')
     const[password,setPassword]=useState('')
+    const {login, isLoggedIn}=useContext(AuthContext);
 
+            if (isLoggedIn) {
+                return <Navigate to="/home" />;
+            }
     async function handleSubmit(e){
         e.preventDefault()
        fetch('http://localhost:8080/login',{
@@ -18,9 +24,14 @@ const Login = () => {
                if(!response.ok){
                    throw new Error('Network response was not ok')
                    }
-               return response.text()
+               return response.json()
                }).then(data=>{
                    console.log(data)
+                   console.log(data.name)
+                   console.log(data.email)
+                   console.log(data.token)
+                   login(data.token,{emailId:data.email,name:data.name})
+
                    }).catch(error=>{
                        console.error('There was a problem with the fetch operation',error)
                        })
@@ -29,7 +40,7 @@ const Login = () => {
 
 
     return (
-        <>
+<>
             <div className="login-container">
                 <div className="login-left">
                     <img src="images/girl6.png" alt="Logo" className="logo-image" />
@@ -42,7 +53,7 @@ const Login = () => {
                                 <label htmlFor="username">Username</label>
                                 <input type="text" id="username" name="username" required
                                 value={email}
-                                                                onChange={(e)=>setEmail(e.target.value)}/>
+                                onChange={(e)=>setEmail(e.target.value)}/>
                             </div>
                             <div className="input-group">
                                 <label htmlFor="password">Password</label>

@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState, useEffect, useContext} from 'react';
 import './Jobs.css';
-import { Link } from 'react-router-dom';
+import { Link,Navigate } from 'react-router-dom';
+import {AuthContext} from './services/AuthContext';
 
 const jobsData = [
     { id: 1, title: 'Frontend Developer', company: 'TechCorp', image: 'images/job1.png' },
@@ -11,10 +12,45 @@ const jobsData = [
     { id: 7, title: 'DevOps Engineer', company: 'CloudSync', image: 'images/job7.png' },
     { id: 8, title: 'QA Engineer', company: 'QualityPlus', image: 'images/job8.jpg' },
     { id: 9, title: 'Content Writer', company: 'Google', image: 'images/company5.png' },
-    { id: 10, title: 'Cybersecurity Analyst', company: 'Intel', image: 'images/company3.png' },
+    { id: 10, title: 'Cybersecurity Analyst', company: 'Intel', image: 'images/company3.png' }
 ];
 
 const Jobs = () => {
+    const [jobs,setJobs]=useState('');
+    const [error,setError]=useState('');
+
+    const { isLoggedIn } = useContext(AuthContext);
+
+        if (!isLoggedIn) {
+            return <Navigate to="/login" />;
+        }
+    useEffect(() => {
+            const token = localStorage.getItem('token');
+
+            if (token) {
+                fetch('http://localhost:8080/job/allJobs', {
+                    method: 'GET',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': `Bearer ${token}`
+                    }
+                })
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error('Failed to fetch jobs');
+                        }
+                        return response.json();
+                    })
+                    .then(data => {
+                        setJobs(data);
+                    })
+                    .catch(error => {
+
+                    });
+            } else {
+                setError('No token found, please log in first.');
+         }
+    },[]);
     return (
         <div className="jobs-container">
             <h1>Exciting Job Opportunities</h1>
