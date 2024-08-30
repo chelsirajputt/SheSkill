@@ -1,8 +1,17 @@
 import React from 'react';
  import './Navbar.css';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import {AuthContext} from './services/AuthContext'
+import {useState, useContext} from 'react'
 
 const Navbar = () => {
+const {isLoggedIn,logout}=useContext(AuthContext)
+const navigate=useNavigate()
+
+function handleLogout(){
+logout();
+navigate('/login')
+}
     return (
   
            <nav>
@@ -22,10 +31,14 @@ const Navbar = () => {
                 
                 <li><a href="#">Entrepreneurship</a></li>
             </ul>
-            <div className="buttons">
+            {!isLoggedIn && <div className="buttons">
                 <Link className="login-btn" to="/login">Login</Link>
                 <Link className="signup-btn" to="/signup">SignUp</Link>
-            </div>
+            </div>}
+            {isLoggedIn && <div className="buttons">
+                            <button className="login-btn" onClick={handleLogout} >Logout</button>
+
+                        </div>}
         </nav>
       
     );
