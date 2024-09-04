@@ -1,42 +1,49 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './Message.css';
 
 const Message = () => {
-    const [messages, setMessages] = useState([]);
-    const [message, setMessage] = useState('');
+  return (
+    <div className="container">
+      {/* Header Section */}
+      <div className="header">
+        <a href="mailto:sheskillportal@gmail.com" className="email-link">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#64ffda" className="icon">
+            {/* Envelope icon */}
+            <path d="M2 3h20v18H2z" />
+          </svg>
+          <span>sheskillportal@gmail.com</span>
+        </a>
+        <a href="https://twitter.com" className="social-link">
+          Twitter
+        </a>
+      </div>
 
-    const handleSend = () => {
-        if (message.trim()) {
-            setMessages([...messages, { text: message, sent: true }]);
-            setMessage('');
-        }
-    };
-
-    return (
-        <div className="message-container">
-            <div className="message-header">
-                <h2>Messages</h2>
-            </div>
-            <div className="message-body">
-                <div className="message-list">
-                    {messages.map((msg, index) => (
-                        <div key={index} className={`message-item ${msg.sent ? 'sent' : 'received'}`}>
-                            {msg.text}
-                        </div>
-                    ))}
-                </div>
-            </div>
-            <div className="message-footer">
-                <input
-                    type="text"
-                    value={message}
-                    onChange={(e) => setMessage(e.target.value)}
-                    placeholder="Type your message..."
-                />
-                <button onClick={handleSend}>Send</button>
-            </div>
-        </div>
-    );
+      {/* Form Section */}
+      <div className="form-container">
+        <h2 className="form-title">Write me a Message <span role="img" aria-label="pointing down">👇</span></h2>
+        <form className="form">
+          <input
+            type="text"
+            placeholder="Your Name"
+            className="input"
+          />
+          <input
+            type="email"
+            placeholder="Your Email"
+            className="input"
+          />
+          <textarea
+            placeholder="Message"
+            rows="4"
+            className="textarea"
+          />
+          <button type="submit" className="submit-button">
+            Send
+          </button>
+        </form>
+      </div>
+    </div>
+  );
 };
 
 export default Message;

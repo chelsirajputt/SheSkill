@@ -1,55 +1,32 @@
-import React, { useState } from 'react';
-import './Network.css';
-import { Link } from 'react-router-dom';
+import React from 'react';
+import './Network.css'; // Import the CSS file for styling
 
-const Network = () => {
-    const [email, setEmail] = useState('');
-    const [otpSent, setOtpSent] = useState(false);
+const profiles = [
+    { id: 1, name: 'Jane Doe', title: 'Software Engineer', company: 'Tech Corp', image: 'https://via.placeholder.com/100' },
+    { id: 2, name: 'John Smith', title: 'Product Manager', company: 'Innovate Inc.', image: 'https://via.placeholder.com/100' },
+    { id: 3, name: 'Emily Johnson', title: 'UX Designer', company: 'Creative Solutions', image: 'https://via.placeholder.com/100' },
+    // Add more profiles as needed
+];
 
-    const handleEmailChange = (e) => setEmail(e.target.value);
-
-    const handleSendOtp = () => {
-        // Here, you would typically send the OTP request
-        setOtpSent(true);
-    };
-
+const NetworkPage = () => {
     return (
-        <div className="network-container">
-            <div className="network-navbar">
-                <h1 className="network-heading">Welcome Back to SheSkill</h1>
-                <div className="network-box">
-                    <h2 className="network-box-heading">Sign In</h2>
-                    <div className="network-options">
-                        <button className="network-option google">
-                            <img src="images/glogo1.png" alt="Sign in with Google" className="network-icon" />
-                            Sign in with Google
-                        </button>
-                        <button className="network-option linkedin">
-                            <img src="images/llogo2.png" alt="Sign in with LinkedIn" className="network-icon" />
-                            Sign in with LinkedIn
-                        </button>
+        <div className="network-page">
+            <h1>Network</h1>
+            <div className="profile-list">
+                {profiles.map(profile => (
+                    <div key={profile.id} className="profile-card">
+                        <img src={profile.image} alt={`${profile.name}'s profile`} className="profile-image" />
+                        <div className="profile-info">
+                            <h2 className="profile-name">{profile.name}</h2>
+                            <p className="profile-title">{profile.title}</p>
+                            <p className="profile-company">{profile.company}</p>
+                            <button className="unfollow-button">Unfollow</button>
+                        </div>
                     </div>
-                    <div className="network-email">
-                        <input
-                            type="email"
-                            value={email}
-                            onChange={handleEmailChange}
-                            placeholder="Enter your email"
-                            className="network-email-input"
-                        />
-                        <button
-                            onClick={handleSendOtp}
-                            className="network-otp-button"
-                            disabled={!email}
-                        >
-                            Continue with OTP
-                        </button>
-                    </div>
-                    {otpSent && <p className="otp-sent-message">OTP has been sent to your email!</p>}
-                </div>
+                ))}
             </div>
         </div>
     );
-};
+}
 
-export default Network;
+export default NetworkPage;
